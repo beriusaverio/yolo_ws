@@ -65,8 +65,8 @@ lib = CDLL("YOUR_ABSOLUTE_PATH_TO_DARKNET_DIRECTORY/libdarknet.so", RTLD_GLOBAL)
 ```
 in line 186 and 187: 
 ```  
-net = load_net(b"YOUR_ABSOLUTE_PATH_TO_yolo_ws_DIRECTORY/yolov3-tiny.cfg", b"YOUR_ABSOLUTE_PATH_TO_yolo_ws_DIRECTORY/yolov3-tiny.weights", 0)
-    meta = load_meta(b"YOUR_ABSOLUTE_PATH_TO_coco.data/coco.data")
+net = load_net(b"YOUR_ABSOLUTE_PATH_TO_yolov3-tiny.cfg_DIRECTORY/yolov3-tiny.cfg", b"YOUR_ABSOLUTE_PATH_TO_yolov3-tiny.weights_DIRECTORY/yolov3-tiny.weights", 0)
+    meta = load_meta(b"YOUR_ABSOLUTE_PATH_TO_yolo_ws_DIRECTORY/coco.data")
 ```
 ## BUILD yolo_ws
 ```  
