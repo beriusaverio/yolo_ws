@@ -49,3 +49,55 @@ change GPU=1 in the Makefile and then
 cd Darknet
 make
 ```
+## ADAPT ws files to your path
+
+### modify coco.data 
+in line 5: 
+```
+names = YOUR_ABSOLUTE_PATH_TO_DARKNET_DIRECTORY/data/coco.names
+```
+###modify webcam.py
+in line 56: 
+```lib = CDLL("YOUR_ABSOLUTE_PATH_TO_DARKNET_DIRECTORY/libdarknet.so", RTLD_GLOBAL)
+```
+in line 186 and 187: 
+```  
+net = load_net(b"YOUR_ABSOLUTE_PATH_TO_yolo_ws_DIRECTORY/yolov3-tiny.cfg", b"YOUR_ABSOLUTE_PATH_TO_yolo_ws_DIRECTORY/yolov3-tiny.weights", 0)
+    meta = load_meta(b"YOUR_ABSOLUTE_PATH_TO_yolo_ws_DIRECTORY/coco.data")
+```
+## BUILD yolo_ws
+```  
+cd yolo_ws
+catkin_make
+```
+## RUN yolo_ws
+make sure you have 3 working usb cameras plugged in your device and then
+* in terminal 1 launch:
+```  
+roslaunch usb_cam usb_cam-test.launch
+```
+* in terminal 2 run:
+```  
+rosrun usb_cam usb_cam_pubber
+```
+* in terminal 3 call:
+```  
+rosservice call /usb_cam/start True
+```
+* in terminal 4 run
+
+```  
+rosrun people_detection webcam.py 
+```
+## CHECK DETECTIONS
+point a camera to a person and see if 
+
+
+```  
+rostopic echo /people_detection 
+```
+returns you a 
+
+```  
+data: "people detected"
+```
