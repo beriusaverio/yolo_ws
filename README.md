@@ -50,7 +50,7 @@ cd Darknet
 make
 ```
 download somewhere yolov3-tiny.weights.
-it's a 35MB weights file you can find easily in web.
+it's a 35MB weights file you can easily find in web.
 ## ADAPT ws files to your path
 
 ### modify coco.data 
