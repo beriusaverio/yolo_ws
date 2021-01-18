@@ -5,7 +5,7 @@ a ROS ws for handling the people detection through yolov3-tiny of 3 frame from 3
 * ROS melodic
 * Python 2.7
 * a working CUDA in your device
-* USB_CAM package in your ROS ws
+* install USB_CAM to satisfy dependencies
 * [Darknet](https://github.com/pjreddie/darknet) - by pjreddie
 
 ### ROS importation in python list 
