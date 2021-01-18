@@ -56,9 +56,10 @@ in line 5:
 ```
 names = YOUR_ABSOLUTE_PATH_TO_DARKNET_DIRECTORY/data/coco.names
 ```
-###modify webcam.py
+### modify webcam.py
 in line 56: 
-```lib = CDLL("YOUR_ABSOLUTE_PATH_TO_DARKNET_DIRECTORY/libdarknet.so", RTLD_GLOBAL)
+```
+lib = CDLL("YOUR_ABSOLUTE_PATH_TO_DARKNET_DIRECTORY/libdarknet.so", RTLD_GLOBAL)
 ```
 in line 186 and 187: 
 ```  
