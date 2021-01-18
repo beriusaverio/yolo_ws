@@ -1,5 +1,5 @@
 # yolo_ws
-a ROS ws for handling the people detection through yolov3-tiny of 3 frames from 3 different camera at the same time.
+a ROS ws for handling the people detection through yolov3-tiny of 3 frames from 3 different cameras at the same time.
 
 ## Prerequisites: 
 * ROS melodic
