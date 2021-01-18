@@ -49,6 +49,8 @@ change GPU=1 in the Makefile and then
 cd Darknet
 make
 ```
+download somewhere yolov3-tiny.weights.
+it's a 35MB weights file you can find easily in web.
 ## ADAPT ws files to your path
 
 ### modify coco.data 
@@ -64,7 +66,7 @@ lib = CDLL("YOUR_ABSOLUTE_PATH_TO_DARKNET_DIRECTORY/libdarknet.so", RTLD_GLOBAL)
 in line 186 and 187: 
 ```  
 net = load_net(b"YOUR_ABSOLUTE_PATH_TO_yolo_ws_DIRECTORY/yolov3-tiny.cfg", b"YOUR_ABSOLUTE_PATH_TO_yolo_ws_DIRECTORY/yolov3-tiny.weights", 0)
-    meta = load_meta(b"YOUR_ABSOLUTE_PATH_TO_yolo_ws_DIRECTORY/coco.data")
+    meta = load_meta(b"YOUR_ABSOLUTE_PATH_TO_coco.data/coco.data")
 ```
 ## BUILD yolo_ws
 ```  
@@ -90,7 +92,7 @@ rosservice call /usb_cam/start True
 ```  
 rosrun people_detection webcam.py 
 ```
-## CHECK DETECTIONS
+## Check detections
 point a camera to a person and see if 
 
 
